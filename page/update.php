@@ -7,9 +7,7 @@ if(isset($_POST['btnSave'])) // JIKA BUTTON SIMPAN DIKLIK
     // AMBIL DATA PADA FORM
     $nama  = $_POST['nama'];
     $jk    = $_POST['jk'];
-    $jk    = str_replace("'","&acute;",$jk);
     $tgl_lahir    = $_POST['tgl_lahir'];
-    $tgl_lahir    = str_replace("'","&acute;",$tgl_lahir);
     // AMBIL DATA PADA FORM
 
     $query=mysqli_query($db, "UPDATE peserta SET nama='$nama', jenis_kelamin='$jk', tgl_lahir='$tgl_lahir' WHERE id='$id'") or die ("Gagal query".mysql_error()); // QUERY UPDATE
@@ -27,7 +25,7 @@ if(isset($_POST['btnSave'])) // JIKA BUTTON SIMPAN DIKLIK
 <h1>Create</h1>
 <hr>
 <?php
-// AMBIL DATA BERDASARKAN ID 
+// AMBIL DATA BERDASARKAN ID
 $query = mysqli_query($db, "SELECT * FROM peserta WHERE id='$id' LIMIT 1");
 $data =  mysqli_fetch_assoc($query);
 // AMBIL DATA BERDASARKAN ID

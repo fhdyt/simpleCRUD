@@ -7,9 +7,7 @@ if(isset($_POST['btnSave'])) // JIKA BUTTON SIMPAN DIKLIK
     // AMBIL DATA PADA FORM
     $nama  = $_POST['nama'];
     $jk    = $_POST['jk'];
-    $jk    = str_replace("'","&acute;",$jk);
     $tgl_lahir    = $_POST['tgl_lahir'];
-    $tgl_lahir    = str_replace("'","&acute;",$tgl_lahir);
     // AMBIL DATA PADA FORM
 
     $query=mysqli_query($db, "INSERT INTO peserta SET nama='$nama', jenis_kelamin='$jk', tgl_lahir='$tgl_lahir'") or die ("Gagal query".mysql_error()); // QUERY SIMPAN

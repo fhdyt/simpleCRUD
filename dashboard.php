@@ -53,7 +53,7 @@
 <br>
 <!-- --------------------------------------------------------- -->
 
-<h3><b>Operator PHP</b></h3>
+<h3><b>Operator Aritmatika PHP</b></h3>
 <table class="table">
   <tr>
     <td>+</td>
@@ -88,6 +88,83 @@
 <hr>
 <br>
 <br>
+
+<!-- --------------------------------------------------------- -->
+
+<h3><b>Operator Perbandingan PHP</b></h3>
+<table class="table">
+  <tr>
+    <td>==</td>
+    <td>Sama Dengan</td>
+  </tr>
+  <tr>
+    <td>!=</td>
+    <td>Tidak Sama Dengan</td>
+  </tr>
+  <tr>
+    <td>></td>
+    <td>Lebih besar dari</td>
+  </tr>
+  <tr>
+    <td><</td>
+    <td>Lebih kecil dari</td>
+  </tr>
+  <tr>
+    <td>>=</td>
+    <td>Lebih besar atau sama dengan</td>
+  </tr>
+  <tr>
+    <td><=</td>
+    <td>Lebih kecil atau sama dengan</td>
+  </tr>
+</table>
+<div class="card">
+  <div class="card-body">
+  <?php
+  $code1 = '<?php
+  $x = 6;
+  $y = 5;
+  if($x>$y)
+  {
+    $result = "Lebih dari 5";
+  }
+  else
+  {
+    $result = "Kurang dari 5";
+  }
+  echo $result;
+?>';
+  highlight_string($code1);
+   ?>
+  </div>
+</div>
+<hr>
+<br>
+<br>
+
+<!-- --------------------------------------------------------- -->
+<h3><b>Operator Logika PHP</b></h3>
+<table class="table">
+  <tr>
+    <td>and</td>
+    <td>&&</td>
+    <td>Dan</td>
+  </tr>
+  <tr>
+    <td>or</td>
+    <td>||</td>
+    <td>Atau</td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td></td>
+    <td>Tidak</td>
+  </tr>
+</table>
+<hr>
+<br>
+<br>
+
 <!-- --------------------------------------------------------- -->
 
 <h3><b>Kondisi PHP</b></h3>

@@ -17,7 +17,7 @@
   <?php
   ////////////////////////////////////////////// PROSES AMBIL DATA //////////////////////////////////////////////
   $query = mysqli_query($db, "SELECT * FROM peserta");
-  while(($data =  mysqli_fetch_assoc($query)))
+  while($data =  mysqli_fetch_assoc($query))
   {
   	$nomor++;
     if($data['jenis_kelamin'] == "L")
