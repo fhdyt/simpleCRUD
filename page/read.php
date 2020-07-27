@@ -1,4 +1,6 @@
-<?php include_once './config/database.php'; // KONEKSI DATABASE ?>
+<?php
+include_once './config/database.php'; // KONEKSI DATABASE
+include_once './config.php';  ?>
 
 <h1>Read</h1>
 <hr>
@@ -34,7 +36,9 @@
          <td><?php echo $data['id']; ?></td>
          <td><?php echo $data['nama']; ?></td>
          <td><?php echo $jk; ?></td>
-         <td><?php echo $data['tgl_lahir']; ?></td>
+         <td><?php
+              echo tanggal($data['tgl_lahir']); ?>
+         </td>
          <td>
             <a href="?page=Update&id=<?php echo $data['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
             <a href="?page=Delete&id=<?php echo $data['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
